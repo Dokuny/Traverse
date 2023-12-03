@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.traverse.query.domain.place.mapper.PlaceMapper">
+
+	<select id="searchPlaces" resultType="placeInfo" parameterType="placeSearchCond">
+		select place_id, name, address,place_type, thumbnail, introduce, lat, lng
+		from place
+		where place_id > #{id}
+		<if test='keyword != null'>
+			and (name like concat('%',#{keyword},'%') or address like concat('%',#{keyword},'%'))
+		</if>
+		<if test="types != null and types.size > 0">
+				and place_type in
+				<foreach collection="types" item="type"
+				separator="," open="(" close=")">
+				#{type}
+				</foreach>
+		</if>
+
+		limit 20
+
+	</select>
+
+	<select id="checkDuplicate" parameterType="string" resultType="boolean">
+		select exists
+						 (select 1
+							from place
+							where name = #{name} and address = #{address} and place_type = #{type});
+	</select>
+</mapper>

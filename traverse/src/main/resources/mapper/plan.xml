@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.traverse.query.domain.plan.mapper.PlanMapper">
+
+  <resultMap id="planDetail" type="planDetailInfo">
+    <id property="planId" column="plan_id"/>
+    <result property="title" column="title"/>
+    <result property="createdAt" column="plan_created_at"/>
+    <collection property="destinations" resultMap="destinationDetail"/>
+  </resultMap>
+  <resultMap id="destinationDetail" type="destinationDetailInfo">
+    <result property="destinationId" column="destination_id"/>
+    <result property="placeId" column="place_id"/>
+    <result property="name" column="name"/>
+    <result property="comment" column="comment"/>
+    <result property="placeType" column="place_type"/>
+    <result property="address" column="address"/>
+    <result property="lat" column="lat"/>
+    <result property="lng" column="lng"/>
+    <result property="thumbnail" column="thumbnail"/>
+    <result property="visitedAt" column="visited_At"/>
+  </resultMap>
+
+
+  <select id="getMyPlans" resultMap="planDetail" parameterType="long">
+    select p2.plan_id,
+           title,
+           comment,
+           p2.created_at as plan_created_at,
+           destination_id,
+           p.place_id,
+           name,
+           place_type,
+           address,
+           introduce,
+           lat,
+           lng,
+           thumbnail,
+           visited_at
+    from destination d
+           join place p on p.place_id = d.place_id
+           join plan p2 on p2.plan_id = d.plan_id
+    where p2.member_id = #{memberId}
+    order by d.visited_at
+  </select>
+
+  <select id="getMyPlanDetail" resultMap="planDetail" parameterType="long">
+    select p2.plan_id,
+           title,
+           comment,
+           p2.created_at as plan_created_at,
+           destination_id,
+           p.place_id,
+           name,
+           place_type,
+           address,
+           introduce,
+           lat,
+           lng,
+           thumbnail,
+           visited_at
+    from destination d
+           join place p on p.place_id = d.place_id
+           join plan p2 on p2.plan_id = d.plan_id
+    where d.plan_id = #{planId}
+      and p2.member_id = #{memberId}
+    order by d.visited_at
+  </select>
+
+  <select id="getMyNearPlan" resultType="nearPlanInfo" parameterType="long">
+    select p.plan_id, max(visited_at) as ended_at, min(visited_at) as started_at, title
+    from destination d
+           join plan p
+                on d.plan_id = p.plan_id
+    where p.plan_id =
+          (select p.plan_id
+           from destination d
+                  join plan p on d.plan_id = p.plan_id
+           where p.member_id = #{memberId}
+             and visited_at >= now()
+           order by visited_at
+           limit 1)
+    group by p.plan_id;
+
+  </select>
+
+</mapper>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.traverse.query.domain.record.mapper.RecordMapper">
+
+    <resultMap id="recordInfo" type="recordInfo">
+        <id property="recordId" column="record_id"/>
+        <result property="title" column="title"/>
+        <result property="isHighlight" column="is_highlight"/>
+        <collection property="recordImages" resultMap="recordImage"/>
+    </resultMap>
+
+  <resultMap id="shareRecordInfo" type="shareRecordInfo">
+    <id property="recordId" column="record_id"/>
+    <result property="memberNickname" column="nickname"/>
+    <result property="memberThumbnail" column="thumbnail"/>
+    <result property="recordContent" column="content"/>
+    <result property="placeName" column="name"/>
+    <collection property="recordImages" resultMap="recordImage"/>
+  </resultMap>
+
+    <resultMap id="recordImage" type="recordImage">
+        <result property="recordImageId" column="record_image_id"/>
+        <result property="url" column="url"/>
+    </resultMap>
+
+
+    <resultMap id="recordDetail" type="recordDetailInfo">
+        <id property="recordId" column="record_id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="isHighlight" column="is_highlight"/>
+        <collection property="recordImages" resultMap="recordImage"/>
+    </resultMap>
+
+
+    <select id="getMyRecords" resultMap="recordInfo" parameterType="long">
+        select r.record_id, title, is_highlight, record_image_id, url
+        from record_image as i
+            join record r on i.record_id = r.record_id
+            join plan p on r.plan_id = p.plan_id
+        where p.member_id = #{memberId}
+        order by r.record_id desc;
+    </select>
+
+
+
+    <select id="getMyRecordDetail" resultMap="recordDetail" parameterType="long">
+        select r.record_id, title, content, i.record_image_id, i.record_id, i.url, is_highlight
+        from record as r
+                 join plan as p
+                      on r.plan_id = p.plan_id
+                 join record_image as i
+                      on r.record_id = i.record_id
+        where r.record_id = #{recordId}
+          and p.member_id = #{memberId}
+
+    </select>
+    <select id="getMyHighlights" resultMap="recordInfo" parameterType="long">
+        select r.record_id, p.title, i.record_image_id, i.record_id, i.url
+        from record as r
+                 join plan as p
+                      on r.plan_id = p.plan_id
+                 join record_image as i
+                      on r.record_id = i.record_id
+        where p.member_id = #{memberId}
+          and is_highlight = true;
+    </select>
+
+  <select id="getRecords" resultMap="shareRecordInfo">
+    select r.record_id, m.nickname,m.thumbnail, r.content, p2.name,i.record_image_id, i.url
+    from record as r
+           join plan as p on r.plan_id = p.plan_id
+           join record_image as i on r.record_id = i.record_id
+            join member m on p.member_id = m.member_id
+            join place p2 on r.place_id = p2.place_id
+    where is_highlight = true
+    order by r.created_at desc;
+  </select>
+</mapper>

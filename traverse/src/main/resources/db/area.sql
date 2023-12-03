@@ -1,0 +1,17 @@
+INSERT INTO travelo.area (area_code, name) VALUES ('1', '서울');
+INSERT INTO travelo.area (area_code, name) VALUES ('2', '인천');
+INSERT INTO travelo.area (area_code, name) VALUES ('3', '대전');
+INSERT INTO travelo.area (area_code, name) VALUES ('31', '경기도');
+INSERT INTO travelo.area (area_code, name) VALUES ('32', '강원특별자치도');
+INSERT INTO travelo.area (area_code, name) VALUES ('33', '충청북도');
+INSERT INTO travelo.area (area_code, name) VALUES ('34', '충청남도');
+INSERT INTO travelo.area (area_code, name) VALUES ('35', '경상북도');
+INSERT INTO travelo.area (area_code, name) VALUES ('36', '경상남도');
+INSERT INTO travelo.area (area_code, name) VALUES ('37', '전라북도');
+INSERT INTO travelo.area (area_code, name) VALUES ('38', '전라남도');
+INSERT INTO travelo.area (area_code, name) VALUES ('39', '제주도');
+INSERT INTO travelo.area (area_code, name) VALUES ('4', '대구');
+INSERT INTO travelo.area (area_code, name) VALUES ('5', '광주');
+INSERT INTO travelo.area (area_code, name) VALUES ('6', '부산');
+INSERT INTO travelo.area (area_code, name) VALUES ('7', '울산');
+INSERT INTO travelo.area (area_code, name) VALUES ('8', '세종특별자치시');

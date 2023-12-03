@@ -1,0 +1,40 @@
+{
+    "name": "traverse",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    },
+    "dependencies": {
+        "@fawmi/vue-google-maps": "^0.9.67",
+        "axios": "^1.6.1",
+        "chart.js": "3.3.2",
+        "fast-deep-equal": "^3.1.3",
+        "file-loader": "^6.2.0",
+        "pinia": "^2.1.7",
+        "pinia-plugin-persistedstate": "^3.2.0",
+        "primeflex": "^3.3.1",
+        "primeicons": "^6.0.1",
+        "primevue": "3.39.0",
+        "swiper": "^8.4.4",
+        "vue": "^3.2.41",
+        "vue-google-maps-ui": "^1.0.0",
+        "vue-jwt-decode": "^0.1.0",
+        "vue-router": "^4.1.5",
+        "vue3-cookies": "^1.0.6",
+        "vue3-google-map": "^0.18.0",
+        "webstomp-client": "^1.2.6"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.1.4",
+        "@vitejs/plugin-vue": "^4.1.0",
+        "@vue/eslint-config-prettier": "^7.0.0",
+        "eslint": "^8.22.0",
+        "eslint-plugin-vue": "^9.3.0",
+        "prettier": "^2.7.1",
+        "sass": "^1.55.0",
+        "vite": "^4.2.1"
+    }
+}

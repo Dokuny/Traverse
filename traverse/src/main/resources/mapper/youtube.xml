@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.traverse.query.domain.dashboard.mapper.YoutubeMapper">
+
+	<select id="getDailyYoutube" resultType="youtubeInfo">
+			select code from daily_youtube
+			where created_at <![CDATA[<]]> now()
+			order by created_at desc
+			limit 15
+	</select>
+</mapper>

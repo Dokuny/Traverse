@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.traverse.query.domain.dashboard.mapper.StatisticsMapper">
+
+  <select id="getMyTouringTypesStatistics" resultType="myTouringTypesStatisticsInfo" parameterType="long">
+    select count(p.place_type) as cnt, p.place_type from destination d
+                                                           join place p on d.place_id = p.place_id
+                                                           join plan pl on d.plan_id = pl.plan_id
+    where pl.member_id = #{memberId}
+    group by p.place_type
+    ;
+  </select>
+
+  <select id="getMyTouringAreasStatistics" resultType="myTouringAreasStatisticsInfo" parameterType="long">
+    SELECT
+      SUM(CASE WHEN address like '서울%' THEN 1 ELSE 0 END) AS seoul,
+      SUM(CASE WHEN address like '부산%' THEN 1 ELSE 0 END) AS busan,
+      SUM(CASE WHEN address like '대구%' THEN 1 ELSE 0 END) AS daegu,
+      SUM(CASE WHEN address like '인천%' THEN 1 ELSE 0 END) AS incheon,
+      SUM(CASE WHEN address like '광주%' THEN 1 ELSE 0 END) AS gwangju,
+      SUM(CASE WHEN address like '대전%' THEN 1 ELSE 0 END) AS daejeon,
+      SUM(CASE WHEN address like '울산%' THEN 1 ELSE 0 END) AS ulsan,
+      SUM(CASE WHEN address like '세종%' THEN 1 ELSE 0 END) AS sejong,
+      SUM(CASE WHEN address like '경기%' THEN 1 ELSE 0 END) AS gyeongi,
+      SUM(CASE WHEN address like '강원%' THEN 1 ELSE 0 END) AS gangwon,
+      SUM(CASE WHEN address like '충%북%' THEN 1 ELSE 0 END) AS chungbuk,
+      SUM(CASE WHEN address like '충%남%' THEN 1 ELSE 0 END) AS chungnam,
+      SUM(CASE WHEN address like '전%북%' THEN 1 ELSE 0 END) AS jeonbuk,
+      SUM(CASE WHEN address like '전%남%' THEN 1 ELSE 0 END) AS jeonnam,
+      SUM(CASE WHEN address like '경%북%' THEN 1 ELSE 0 END) AS gyeongbuk,
+      SUM(CASE WHEN address like '경%남%' THEN 1 ELSE 0 END) AS gyeongnam,
+      SUM(CASE WHEN address like '제주%' THEN 1 ELSE 0 END) AS jeju
+    from destination d
+           join place p on d.place_id = p.place_id
+           join plan pl on d.plan_id = pl.plan_id
+    where pl.member_id = #{memberId}
+  </select>
+
+
+</mapper>
