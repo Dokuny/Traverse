@@ -41,9 +41,8 @@
 
 
 
-
-
 ## 🚀 Demo
+
 
 <table align="center">
 <thead>
@@ -126,7 +125,7 @@
 <td width="300" align="center">
 
 <b>
-팀원과 의사소통하는 팀 채팅
+여행 기록 공유 (하이라이트)
 </b>
 </td>
 </tr>
@@ -138,9 +137,9 @@
 <img src="https://private-user-images.githubusercontent.com/87813831/287522754-d53cfac4-44cb-4763-860d-60fe674f1714.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE2MTE5NTYsIm5iZiI6MTcwMTYxMTY1NiwicGF0aCI6Ii84NzgxMzgzMS8yODc1MjI3NTQtZDUzY2ZhYzQtNDRjYi00NzYzLTg2MGQtNjBmZTY3NGYxNzE0LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjAzVDEzNTQxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRjYjY2YzMwOTFjZmZjMGJmZmZmOTE1ZWEzYWZjMGRkNTgzNmJhMTcyMTc2Yzc1ZTNmNDFjNWQ3ZTQzZDVjMTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.KuYiF8OsC8LdQapRrVK-5W0M913u7y2MVZbDc06mnUw" width="350">
 </td>
 </tr>
-
-
+</table>
 <br><br>
+
 
 ## 🧑‍🤝‍🧑 역할
 
