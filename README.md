@@ -120,7 +120,7 @@
 <td width="300" align="center">
 
 <b>
-참여 신청 알림 
+여행 기록 남기기
 </b>
 </td>
 <td width="300" align="center">
@@ -132,36 +132,12 @@
 </tr>
 <tr>
 <td width="300" align="center">
-<img src="https://user-images.githubusercontent.com/49369306/195658135-52696018-8437-4e23-9c1c-fd7893e04c81.gif" width="350">
+<img src="https://private-user-images.githubusercontent.com/87813831/287522112-415e0c71-2763-422a-847d-c5b2303d304d.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE2MTE1ODcsIm5iZiI6MTcwMTYxMTI4NywicGF0aCI6Ii84NzgxMzgzMS8yODc1MjIxMTItNDE1ZTBjNzEtMjc2My00MjJhLTg0N2QtYzViMjMwM2QzMDRkLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjAzVDEzNDgwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWI4ZjM1MzkzOTYzOGVhY2FlMzQzZWY5M2I0OGNjMWJmNDBhMWVkNjgwYmI3OTFjNWJjZGViZGE5ODA4NGFiNmMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ElqQhwi74SGtEQkpy83K7Tqtre7oXMTyAG32Nh0JSMg" width="350">
 </td>
 <td width="300" align="center">
-<img src="https://user-images.githubusercontent.com/49369306/195594127-c82f606f-8326-471e-8213-0a780722a422.gif" width="350">
+<img src="https://private-user-images.githubusercontent.com/87813831/287522754-d53cfac4-44cb-4763-860d-60fe674f1714.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE2MTE5NTYsIm5iZiI6MTcwMTYxMTY1NiwicGF0aCI6Ii84NzgxMzgzMS8yODc1MjI3NTQtZDUzY2ZhYzQtNDRjYi00NzYzLTg2MGQtNjBmZTY3NGYxNzE0LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjAzVDEzNTQxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRjYjY2YzMwOTFjZmZjMGJmZmZmOTE1ZWEzYWZjMGRkNTgzNmJhMTcyMTc2Yzc1ZTNmNDFjNWQ3ZTQzZDVjMTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.KuYiF8OsC8LdQapRrVK-5W0M913u7y2MVZbDc06mnUw" width="350">
 </td>
 </tr>
-<tr>
-<td width="300" align="center">
-
-<b>
-이번 주 인기 기술 스택 통계 
-</b>
-</td>
-<td width="300" align="center">
-
-<b>
-기술스택 맞춤 임박 공고 이메일 추천 기능
-</b>
-</td>
-</tr>
-<tr>
-<td width="300" align="center">
-<img src="https://user-images.githubusercontent.com/49369306/195584647-2f17ae6b-1a41-47ec-964a-d67cba0a247a.gif" width="350">
-</td>
-<td width="300" align="center">
-<img src="https://user-images.githubusercontent.com/49369306/195590532-b5569b8c-26e0-4520-91b0-11639688ec01.png" width="350">
-</td>
-</tr>
-</tbody>
-</table>
 
 
 <br><br>
